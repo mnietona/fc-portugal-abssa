@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC Portugal | ABSSA D1</title>
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <title>FC Portugal | Portail Équipe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            red: '#8A1538',   /* Rouge profond portugais */
-                            green: '#006600', /* Vert forêt */
-                            gold: '#D4AF37',  /* Or pour les accents */
-                            dark: '#121212',  /* Fond très sombre (élégant) */
-                            card: '#1E1E1E'   /* Fond des cartes */
+                            red: '#8A1538',   /* Rouge Portugal */
+                            green: '#006600', /* Vert Portugal */
+                            gold: '#D4AF37',  /* Or */
+                            dark: '#121212',  /* Fond global */
+                            card: '#1A1A1A'   /* Fond des cartes */
                         }
                     }
                 }
@@ -23,23 +23,190 @@
         }
     </script>
 </head>
-<body class="bg-brand-dark text-gray-200 font-sans antialiased min-h-screen flex items-center justify-center">
+<body class="bg-brand-dark text-gray-200 font-sans antialiased min-h-screen pb-12">
 
-    <!-- Container principal -->
-    <div class="text-center p-8 bg-brand-card rounded-2xl shadow-2xl border-t-4 border-brand-red">
-        
+    <header class="max-w-5xl mx-auto text-center pt-10 pb-8 px-4">
         <div class="flex justify-center space-x-2 mb-4">
             <div class="w-8 h-2 bg-brand-green rounded-full"></div>
             <div class="w-8 h-2 bg-brand-red rounded-full"></div>
             <div class="w-8 h-2 bg-brand-gold rounded-full"></div>
         </div>
+        <h1 class="text-5xl md:text-6xl font-bold text-white tracking-tight mb-2">FC Portugal</h1>
+        <h2 id="saison-titre" class="text-xl text-brand-gold uppercase tracking-widest font-semibold">ABSSA Division 1</h2>
+    </header>
 
-        <h1 class="text-5xl font-bold text-white mb-2 tracking-tight">FC Portugal</h1>
-        <h2 class="text-xl text-brand-gold uppercase tracking-widest font-semibold">ABSSA Division 1</h2>
-        
-        <p class="mt-6 text-gray-400">Le portail est en cours de construction...</p>
-        
-    </div>
+    <main class="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
 
+        <div class="lg:col-span-1 space-y-6">
+            
+            <div class="bg-brand-card rounded-2xl shadow-xl border-t-4 border-brand-green overflow-hidden">
+                <div class="p-4 bg-black/30 border-b border-gray-800">
+                    <h3 class="text-lg font-bold text-white flex items-center">
+                        <span class="mr-2">⚽</span> Prochain Match
+                    </h3>
+                </div>
+                <div class="p-5" id="prochain-match-container">
+                    <p class="text-gray-400 text-center text-sm">Recherche du match...</p>
+                </div>
+            </div>
+
+            <div class="bg-brand-card rounded-2xl shadow-xl border-t-4 border-brand-red overflow-hidden">
+                <div class="p-4 bg-black/30 border-b border-gray-800">
+                    <h3 class="text-lg font-bold text-white flex items-center">
+                        <span class="mr-2">🔥</span> Dernier Résultat
+                    </h3>
+                </div>
+                <div class="p-5" id="dernier-resultat-container">
+                    <p class="text-gray-400 text-center text-sm">Recherche du match...</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lg:col-span-2">
+            <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden h-full">
+                <div class="p-4 bg-black/30 border-b border-gray-800 flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-white">Classement Général</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm whitespace-nowrap">
+                        <thead class="text-gray-400 bg-black/20 text-xs uppercase">
+                            <tr>
+                                <th class="px-4 py-3 text-center w-12">#</th>
+                                <th class="px-4 py-3">Équipe</th>
+                                <th class="px-3 py-3 text-center" title="Joués">J</th>
+                                <th class="px-3 py-3 text-center text-brand-green" title="Gagnés">G</th>
+                                <th class="px-3 py-3 text-center text-gray-400" title="Nuls">N</th>
+                                <th class="px-3 py-3 text-center text-brand-red" title="Perdus">P</th>
+                                <th class="px-4 py-3 text-center font-bold text-brand-gold text-base">Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableau-classement" class="divide-y divide-gray-800">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="max-w-5xl mx-auto mt-12 px-4 text-center text-xs text-gray-600">
+        <p>Application non-officielle créée pour le FC Portugal.</p>
+        <p>Toutes les données statistiques appartiennent à l'<a href="https://www.abssa.be" target="_blank" class="underline hover:text-brand-gold">ASBL Royale ABSSA</a>.</p>
+    </footer>
+
+    <script>
+        const NOM_MON_CLUB = "PORTUGAL FC";
+
+        // 1. Charger et afficher le Classement
+        fetch('../data/abssa_data.json')
+            .then(res => res.json())
+            .then(data => {
+                const tbody = document.getElementById('tableau-classement');
+                
+                data.classement.forEach(equipe => {
+                    const isMonClub = equipe.equipe.includes(NOM_MON_CLUB);
+                    const rowClass = isMonClub 
+                        ? 'bg-brand-red/10 font-bold text-white border-l-4 border-brand-green' 
+                        : 'hover:bg-white/5 text-gray-300';
+                    
+                    const tr = document.createElement('tr');
+                    tr.className = rowClass;
+                    tr.innerHTML = `
+                        <td class="px-4 py-3 text-center text-gray-500">${equipe.position}</td>
+                        <td class="px-4 py-3">
+                            ${equipe.equipe}
+                            ${isMonClub ? ' <span class="text-xs text-brand-gold ml-2">⭐</span>' : ''}
+                        </td>
+                        <td class="px-3 py-3 text-center">${equipe.joues}</td>
+                        <td class="px-3 py-3 text-center text-brand-green/80">${equipe.gagnes}</td>
+                        <td class="px-3 py-3 text-center text-gray-500">${equipe.nuls}</td>
+                        <td class="px-3 py-3 text-center text-brand-red/80">${equipe.perdus}</td>
+                        <td class="px-4 py-3 text-center text-lg text-brand-gold font-bold">${equipe.points}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            });
+
+        // 2. Charger et analyser le Calendrier
+        fetch('../data/calendrier.json')
+            .then(res => res.json())
+            .then(data => {
+                let mesMatchs = [];
+                
+                // On extrait tous les matchs du FC Portugal
+                for (const journee in data.journees) {
+                    data.journees[journee].forEach(match => {
+                        if (match.equipe_domicile.includes(NOM_MON_CLUB) || match.equipe_exterieure.includes(NOM_MON_CLUB)) {
+                            match.journee_nom = journee.replace('_', ' ');
+                            mesMatchs.push(match);
+                        }
+                    });
+                }
+
+                // Trier les matchs : Joués d'un côté, À venir de l'autre
+                const matchsJoues = mesMatchs.filter(m => m.statut === "Joue");
+                const matchsAVenir = mesMatchs.filter(m => m.statut === "A Venir");
+
+                // --- AFFICHAGE PROCHAIN MATCH ---
+                const contProchain = document.getElementById('prochain-match-container');
+                if (matchsAVenir.length > 0) {
+                    const prochain = matchsAVenir[0]; // Le premier de la liste à venir
+                    const isDomicile = prochain.equipe_domicile.includes(NOM_MON_CLUB);
+                    const adversaire = isDomicile ? prochain.equipe_exterieure : prochain.equipe_domicile;
+                    const lieu = isDomicile ? "À Domicile" : "À l'extérieur";
+
+                    contProchain.innerHTML = `
+                        <div class="text-center mb-3">
+                            <span class="text-xs text-brand-gold uppercase tracking-wider">${prochain.journee_nom}</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="text-center w-5/12 font-bold ${isDomicile ? 'text-white' : 'text-gray-400'}">${prochain.equipe_domicile}</div>
+                            <div class="text-center w-2/12 text-gray-600 font-bold">VS</div>
+                            <div class="text-center w-5/12 font-bold ${!isDomicile ? 'text-white' : 'text-gray-400'}">${prochain.equipe_exterieure}</div>
+                        </div>
+                        <div class="bg-black/40 rounded py-2 px-3 text-center text-xs text-gray-400 mt-2">
+                            ${lieu}
+                        </div>
+                    `;
+                } else {
+                    contProchain.innerHTML = `<p class="text-gray-400 text-center">Saison terminée !</p>`;
+                }
+
+                // --- AFFICHAGE DERNIER RÉSULTAT ---
+                const contDernier = document.getElementById('dernier-resultat-container');
+                if (matchsJoues.length > 0) {
+                    const dernier = matchsJoues[matchsJoues.length - 1]; // Le dernier de la liste jouée
+                    const isDomicile = dernier.equipe_domicile.includes(NOM_MON_CLUB);
+                    
+                    // Calcul de la victoire/défaite
+                    let resultatText = "Nul";
+                    let colorClass = "text-gray-400";
+                    if (isDomicile && dernier.score_domicile > dernier.score_exterieur) { resultatText = "Victoire"; colorClass = "text-brand-green"; }
+                    if (!isDomicile && dernier.score_exterieur > dernier.score_domicile) { resultatText = "Victoire"; colorClass = "text-brand-green"; }
+                    if (isDomicile && dernier.score_domicile < dernier.score_exterieur) { resultatText = "Défaite"; colorClass = "text-brand-red"; }
+                    if (!isDomicile && dernier.score_exterieur < dernier.score_domicile) { resultatText = "Défaite"; colorClass = "text-brand-red"; }
+
+                    contDernier.innerHTML = `
+                        <div class="text-center mb-3">
+                            <span class="text-xs text-gray-500 uppercase tracking-wider">${dernier.journee_nom}</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-black/20 p-3 rounded-lg border border-gray-800">
+                            <div class="text-right w-4/12 font-bold ${isDomicile ? 'text-white' : 'text-gray-400'} text-sm truncate" title="${dernier.equipe_domicile}">${dernier.equipe_domicile.substring(0, 12)}</div>
+                            <div class="text-center w-4/12 px-2 flex justify-center space-x-2">
+                                <span class="bg-brand-dark px-2 py-1 rounded text-lg font-bold text-white border border-gray-700">${dernier.score_domicile}</span>
+                                <span class="bg-brand-dark px-2 py-1 rounded text-lg font-bold text-white border border-gray-700">${dernier.score_exterieur}</span>
+                            </div>
+                            <div class="text-left w-4/12 font-bold ${!isDomicile ? 'text-white' : 'text-gray-400'} text-sm truncate" title="${dernier.equipe_exterieure}">${dernier.equipe_exterieure.substring(0, 12)}</div>
+                        </div>
+                        <div class="text-center mt-3 font-bold ${colorClass} uppercase tracking-widest text-xs">
+                            ${resultatText}
+                        </div>
+                    `;
+                } else {
+                    contDernier.innerHTML = `<p class="text-gray-400 text-center">Aucun match joué</p>`;
+                }
+            });
+    </script>
 </body>
 </html>
