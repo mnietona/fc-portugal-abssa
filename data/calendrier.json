@@ -1,0 +1,1332 @@
+{
+    "saison": "2025-2026",
+    "division": "Division 1",
+    "journees": {
+        "Journee_1": [
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 2,
+                "score_exterieur": 3,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 4,
+                "score_exterieur": 4,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 2,
+                "score_exterieur": 3,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 2,
+                "score_exterieur": 3,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_2": [
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 0,
+                "score_exterieur": 4,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 2,
+                "score_exterieur": 2,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 4,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_3": [
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 2,
+                "score_exterieur": 2,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 0,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 2,
+                "score_exterieur": 2,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 1,
+                "score_exterieur": 3,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 3,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 2,
+                "score_exterieur": 3,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_4": [
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 3,
+                "score_exterieur": 2,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 0,
+                "score_exterieur": 1,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 4,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_5": [
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 5,
+                "score_exterieur": 0,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 0,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 0,
+                "score_exterieur": 3,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_6": [
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 5,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 0,
+                "score_exterieur": 0,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 0,
+                "score_exterieur": 5,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 1,
+                "score_exterieur": 3,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_7": [
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 3,
+                "score_exterieur": 2,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 3,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 3,
+                "score_exterieur": 4,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_8": [
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 4,
+                "score_exterieur": 2,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 3,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_9": [
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 0,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 4,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 0,
+                "score_exterieur": 0,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 3,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_10": [
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 3,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 5,
+                "score_exterieur": 0,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 1,
+                "score_exterieur": 4,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 3,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_11": [
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 6,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 6,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 4,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 3,
+                "score_exterieur": 0,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_12": [
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 2,
+                "score_exterieur": 3,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 1,
+                "score_exterieur": 5,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 4,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_13": [
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 0,
+                "score_exterieur": 1,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 3,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 3,
+                "score_exterieur": 3,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 0,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_14": [
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 2,
+                "score_exterieur": 3,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 2,
+                "score_exterieur": 0,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 9,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 0,
+                "score_exterieur": 0,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 2,
+                "score_exterieur": 6,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_15": [
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 2,
+                "score_exterieur": 2,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 4,
+                "score_exterieur": 3,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 3,
+                "score_exterieur": 3,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 0,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_16": [
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 2,
+                "score_exterieur": 2,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 1,
+                "score_exterieur": 3,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 7,
+                "score_exterieur": 0,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_17": [
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 0,
+                "score_exterieur": 3,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_18": [
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 0,
+                "score_exterieur": 0,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 2,
+                "score_exterieur": 5,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 2,
+                "score_exterieur": 0,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_19": [
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 1,
+                "score_exterieur": 5,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 2,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 2,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 4,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_20": [
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 0,
+                "score_exterieur": 5,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 0,
+                "score_exterieur": 5,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 2,
+                "score_exterieur": 2,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_21": [
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 3,
+                "score_exterieur": 4,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 0,
+                "score_exterieur": 3,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 0,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_22": [
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 3,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_23": [
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 1,
+                "score_exterieur": 2,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 1,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 0,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 4,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 2,
+                "score_exterieur": 1,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 3,
+                "score_exterieur": 3,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_24": [
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 1,
+                "score_exterieur": 6,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 1,
+                "score_exterieur": 5,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 0,
+                "score_exterieur": 4,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 6,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 1,
+                "score_exterieur": 4,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_25": [
+            {
+                "equipe_domicile": "CHOULE AUDERGHEM 1",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "WONG A.S.",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS LTC 1",
+                "score_domicile": 4,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRUSSELS BRITISH R 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRITISH UNITED 1",
+                "score_domicile": 2,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BRAINE STORMING",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "AZUR RCS 1",
+                "score_domicile": 2,
+                "score_exterieur": 0,
+                "equipe_exterieure": "HERMES FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "LXG CINQUANTENAIRE",
+                "score_domicile": 2,
+                "score_exterieur": 0,
+                "equipe_exterieure": "BESACE RFC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "IRLANDE FC 1",
+                "score_domicile": 8,
+                "score_exterieur": 1,
+                "equipe_exterieure": "PORTUGAL FC",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HIGGINS-PUMAS 1",
+                "score_domicile": 2,
+                "score_exterieur": 3,
+                "equipe_exterieure": "COLO-COLO UNITED",
+                "statut": "Joue"
+            }
+        ],
+        "Journee_26": [
+            {
+                "equipe_domicile": "COLO-COLO UNITED",
+                "score_domicile": 2,
+                "score_exterieur": 6,
+                "equipe_exterieure": "IRLANDE FC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "PORTUGAL FC",
+                "score_domicile": 1,
+                "score_exterieur": 3,
+                "equipe_exterieure": "LXG CINQUANTENAIRE",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BESACE RFC",
+                "score_domicile": 0,
+                "score_exterieur": 1,
+                "equipe_exterieure": "AZUR RCS 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "HERMES FC",
+                "score_domicile": 1,
+                "score_exterieur": 1,
+                "equipe_exterieure": "BRITISH UNITED 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRAINE STORMING",
+                "score_domicile": 3,
+                "score_exterieur": 2,
+                "equipe_exterieure": "BRUSSELS LTC 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "BRUSSELS BRITISH R 1",
+                "score_domicile": 5,
+                "score_exterieur": 2,
+                "equipe_exterieure": "CHOULE AUDERGHEM 1",
+                "statut": "Joue"
+            },
+            {
+                "equipe_domicile": "WONG A.S.",
+                "score_domicile": 4,
+                "score_exterieur": 1,
+                "equipe_exterieure": "HIGGINS-PUMAS 1",
+                "statut": "Joue"
+            }
+        ]
+    }
+}
