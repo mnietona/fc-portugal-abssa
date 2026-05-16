@@ -1,212 +1,208 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC Portugal | Portail Équipe</title>
+    <title>FC Portugal | Team App</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            red: '#8A1538',   /* Rouge Portugal */
-                            green: '#006600', /* Vert Portugal */
-                            gold: '#D4AF37',  /* Or */
-                            dark: '#121212',  /* Fond global */
-                            card: '#1A1A1A'   /* Fond des cartes */
-                        }
+                        brand: { red: '#8A1538', green: '#006600', gold: '#D4AF37', dark: '#0f0f0f', card: '#171717' }
                     }
                 }
             }
         }
     </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .tab-active { border-bottom: 3px solid #D4AF37; color: white; }
+    </style>
 </head>
-<body class="bg-brand-dark text-gray-200 font-sans antialiased min-h-screen pb-12">
+<body class="bg-brand-dark text-gray-200 font-sans">
 
-    <header class="max-w-5xl mx-auto text-center pt-10 pb-8 px-4">
-        <div class="flex justify-center space-x-2 mb-4">
-            <div class="w-8 h-2 bg-brand-green rounded-full"></div>
-            <div class="w-8 h-2 bg-brand-red rounded-full"></div>
-            <div class="w-8 h-2 bg-brand-gold rounded-full"></div>
-        </div>
-        <h1 class="text-5xl md:text-6xl font-bold text-white tracking-tight mb-2">FC Portugal</h1>
-        <h2 id="saison-titre" class="text-xl text-brand-gold uppercase tracking-widest font-semibold">ABSSA Division 1</h2>
+    <nav class="fixed bottom-0 left-0 right-0 bg-brand-card border-t border-gray-800 z-50 px-6 py-3 flex justify-between items-center lg:top-0 lg:bottom-auto">
+        <button onclick="showSection('next')" class="flex flex-col items-center text-xs gap-1 hover:text-brand-gold">
+            <i class="fa-solid fa-calendar-day text-lg"></i>Match
+        </button>
+        <button onclick="showSection('classement')" class="flex flex-col items-center text-xs gap-1 hover:text-brand-gold">
+            <i class="fa-solid fa-list-ol text-lg"></i>Classement
+        </button>
+        <button onclick="showSection('calendrier')" class="flex flex-col items-center text-xs gap-1 hover:text-brand-gold">
+            <i class="fa-solid fa-table-list text-lg"></i>Résultats
+        </button>
+    </nav>
+
+    <header class="p-6 pt-10 text-center lg:mt-16">
+        <h1 class="text-3xl font-black text-white italic">FC PORTUGAL</h1>
+        <p class="text-brand-gold text-xs tracking-[0.3em] uppercase">Division 1 • 2025/2026</p>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <main class="max-w-md mx-auto p-4 pb-24 lg:max-w-4xl">
+        
+        <section id="section-next" class="space-y-4">
+            <div id="next-match-card"></div>
+        </section>
 
-        <div class="lg:col-span-1 space-y-6">
-            
-            <div class="bg-brand-card rounded-2xl shadow-xl border-t-4 border-brand-green overflow-hidden">
-                <div class="p-4 bg-black/30 border-b border-gray-800">
-                    <h3 class="text-lg font-bold text-white flex items-center">
-                        <span class="mr-2">⚽</span> Prochain Match
-                    </h3>
-                </div>
-                <div class="p-5" id="prochain-match-container">
-                    <p class="text-gray-400 text-center text-sm">Recherche du match...</p>
-                </div>
+        <section id="section-classement" class="hidden">
+            <div class="bg-brand-card rounded-xl overflow-hidden">
+                <table class="w-full text-sm">
+                    <thead class="bg-black/40 text-gray-500 uppercase text-[10px]">
+                        <tr>
+                            <th class="p-3 text-center">#</th>
+                            <th class="p-3 text-left">Équipe</th>
+                            <th class="p-3 text-center">J</th>
+                            <th class="p-3 text-center text-white">Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body" class="divide-y divide-gray-800"></tbody>
+                </table>
             </div>
+        </section>
 
-            <div class="bg-brand-card rounded-2xl shadow-xl border-t-4 border-brand-red overflow-hidden">
-                <div class="p-4 bg-black/30 border-b border-gray-800">
-                    <h3 class="text-lg font-bold text-white flex items-center">
-                        <span class="mr-2">🔥</span> Dernier Résultat
-                    </h3>
-                </div>
-                <div class="p-5" id="dernier-resultat-container">
-                    <p class="text-gray-400 text-center text-sm">Recherche du match...</p>
-                </div>
+        <section id="section-calendrier" class="hidden">
+            <div class="flex items-center justify-between mb-4 bg-brand-card p-2 rounded-lg">
+                <button onclick="changeDay(-1)" class="p-2"><i class="fa-solid fa-chevron-left"></i></button>
+                <span id="current-day-label" class="font-bold text-brand-gold">Journée 1</span>
+                <button onclick="changeDay(1)" class="p-2"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
-
-        </div>
-
-        <div class="lg:col-span-2">
-            <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden h-full">
-                <div class="p-4 bg-black/30 border-b border-gray-800 flex justify-between items-center">
-                    <h3 class="text-xl font-bold text-white">Classement Général</h3>
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm whitespace-nowrap">
-                        <thead class="text-gray-400 bg-black/20 text-xs uppercase">
-                            <tr>
-                                <th class="px-4 py-3 text-center w-12">#</th>
-                                <th class="px-4 py-3">Équipe</th>
-                                <th class="px-3 py-3 text-center" title="Joués">J</th>
-                                <th class="px-3 py-3 text-center text-brand-green" title="Gagnés">G</th>
-                                <th class="px-3 py-3 text-center text-gray-400" title="Nuls">N</th>
-                                <th class="px-3 py-3 text-center text-brand-red" title="Perdus">P</th>
-                                <th class="px-4 py-3 text-center font-bold text-brand-gold text-base">Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableau-classement" class="divide-y divide-gray-800">
-                            </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+            <div id="day-results" class="space-y-2"></div>
+        </section>
 
     </main>
 
-    <footer class="max-w-5xl mx-auto mt-12 px-4 text-center text-xs text-gray-600">
-        <p>Application non-officielle créée pour le FC Portugal.</p>
-        <p>Toutes les données statistiques appartiennent à l'<a href="https://www.abssa.be" target="_blank" class="underline hover:text-brand-gold">ASBL Royale ABSSA</a>.</p>
-    </footer>
-
     <script>
-        const NOM_MON_CLUB = "PORTUGAL FC";
+        let currentDay = 1;
+        let globalData = { ranking: [], calendar: {} };
+        const MY_CLUB = "PORTUGAL FC";
 
-        // 1. Charger et afficher le Classement
-        fetch('../data/abssa_data.json')
-            .then(res => res.json())
-            .then(data => {
-                const tbody = document.getElementById('tableau-classement');
-                
-                data.classement.forEach(equipe => {
-                    const isMonClub = equipe.equipe.includes(NOM_MON_CLUB);
-                    const rowClass = isMonClub 
-                        ? 'bg-brand-red/10 font-bold text-white border-l-4 border-brand-green' 
-                        : 'hover:bg-white/5 text-gray-300';
-                    
-                    const tr = document.createElement('tr');
-                    tr.className = rowClass;
-                    tr.innerHTML = `
-                        <td class="px-4 py-3 text-center text-gray-500">${equipe.position}</td>
-                        <td class="px-4 py-3">
-                            ${equipe.equipe}
-                            ${isMonClub ? ' <span class="text-xs text-brand-gold ml-2">⭐</span>' : ''}
-                        </td>
-                        <td class="px-3 py-3 text-center">${equipe.joues}</td>
-                        <td class="px-3 py-3 text-center text-brand-green/80">${equipe.gagnes}</td>
-                        <td class="px-3 py-3 text-center text-gray-500">${equipe.nuls}</td>
-                        <td class="px-3 py-3 text-center text-brand-red/80">${equipe.perdus}</td>
-                        <td class="px-4 py-3 text-center text-lg text-brand-gold font-bold">${equipe.points}</td>
-                    `;
-                    tbody.appendChild(tr);
-                });
+        async function init() {
+            // Chargement parallèle des deux sources de données
+            const [resRanking, resCal] = await Promise.all([
+                fetch('../data/abssa_data.json').then(r => r.json()),
+                fetch('../data/calendrier.json').then(r => r.json())
+            ]);
+            
+            globalData.ranking = resRanking.classement;
+            globalData.calendar = resCal.journees;
+
+            renderRanking();
+            renderNextMatch();
+            renderDay(1);
+        }
+
+        function showSection(id) {
+            ['next', 'classement', 'calendrier'].forEach(s => {
+                document.getElementById(`section-${s}`).classList.add('hidden');
             });
+            document.getElementById(`section-${id}`).classList.remove('hidden');
+        }
 
-        // 2. Charger et analyser le Calendrier
-        fetch('../data/calendrier.json')
-            .then(res => res.json())
-            .then(data => {
-                let mesMatchs = [];
-                
-                // On extrait tous les matchs du FC Portugal
-                for (const journee in data.journees) {
-                    data.journees[journee].forEach(match => {
-                        if (match.equipe_domicile.includes(NOM_MON_CLUB) || match.equipe_exterieure.includes(NOM_MON_CLUB)) {
-                            match.journee_nom = journee.replace('_', ' ');
-                            mesMatchs.push(match);
-                        }
-                    });
-                }
+        function renderRanking() {
+            const container = document.getElementById('ranking-body');
+            container.innerHTML = globalData.ranking.map(team => `
+                <tr class="${team.equipe.includes(MY_CLUB) ? 'bg-brand-red/20 border-l-4 border-brand-green' : ''}">
+                    <td class="p-3 text-center text-gray-500">${team.position}</td>
+                    <td class="p-3 font-medium">${team.equipe}</td>
+                    <td class="p-3 text-center">${team.joues}</td>
+                    <td class="p-3 text-center font-bold text-brand-gold text-lg">${team.points}</td>
+                </tr>
+            `).join('');
+        }
 
-                // Trier les matchs : Joués d'un côté, À venir de l'autre
-                const matchsJoues = mesMatchs.filter(m => m.statut === "Joue");
-                const matchsAVenir = mesMatchs.filter(m => m.statut === "A Venir");
+        function renderNextMatch() {
+            // On cherche le premier match "A Venir"
+            let next = null;
+            for(let i=1; i<=26; i++) {
+                next = globalData.calendar[`Journee_${i}`].find(m => 
+                    (m.equipe_domicile.includes(MY_CLUB) || m.equipe_exterieure.includes(MY_CLUB)) && m.statut === "A Venir"
+                );
+                if(next) break;
+            }
 
-                // --- AFFICHAGE PROCHAIN MATCH ---
-                const contProchain = document.getElementById('prochain-match-container');
-                if (matchsAVenir.length > 0) {
-                    const prochain = matchsAVenir[0]; // Le premier de la liste à venir
-                    const isDomicile = prochain.equipe_domicile.includes(NOM_MON_CLUB);
-                    const adversaire = isDomicile ? prochain.equipe_exterieure : prochain.equipe_domicile;
-                    const lieu = isDomicile ? "À Domicile" : "À l'extérieur";
+            const container = document.getElementById('next-match-card');
+            if(!next) {
+                container.innerHTML = "<p class='text-center py-10'>Aucun match prévu</p>";
+                return;
+            }
 
-                    contProchain.innerHTML = `
-                        <div class="text-center mb-3">
-                            <span class="text-xs text-brand-gold uppercase tracking-wider">${prochain.journee_nom}</span>
-                        </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="text-center w-5/12 font-bold ${isDomicile ? 'text-white' : 'text-gray-400'}">${prochain.equipe_domicile}</div>
-                            <div class="text-center w-2/12 text-gray-600 font-bold">VS</div>
-                            <div class="text-center w-5/12 font-bold ${!isDomicile ? 'text-white' : 'text-gray-400'}">${prochain.equipe_exterieure}</div>
-                        </div>
-                        <div class="bg-black/40 rounded py-2 px-3 text-center text-xs text-gray-400 mt-2">
-                            ${lieu}
-                        </div>
-                    `;
-                } else {
-                    contProchain.innerHTML = `<p class="text-gray-400 text-center">Saison terminée !</p>`;
-                }
+            // On récupère les infos de l'adversaire dans le JSON ranking pour avoir le terrain/maillot
+            const isDom = next.equipe_domicile.includes(MY_CLUB);
+            const advName = isDom ? next.equipe_exterieure : next.equipe_domicile;
+            // On nettoie le nom de l'adversaire pour chercher dans la base (enlever le chiffre)
+            const advClean = advName.replace(/\s+\d+$/, "").trim();
+            const advInfo = globalData.ranking.find(t => t.equipe.includes(advClean)) || {};
 
-                // --- AFFICHAGE DERNIER RÉSULTAT ---
-                const contDernier = document.getElementById('dernier-resultat-container');
-                if (matchsJoues.length > 0) {
-                    const dernier = matchsJoues[matchsJoues.length - 1]; // Le dernier de la liste jouée
-                    const isDomicile = dernier.equipe_domicile.includes(NOM_MON_CLUB);
+            container.innerHTML = `
+                <div class="bg-brand-card rounded-2xl p-6 shadow-2xl border border-gray-800">
+                    <div class="flex justify-between items-center mb-6 text-center">
+                        <div class="w-5/12"><p class="font-bold text-white">${next.equipe_domicile}</p></div>
+                        <div class="text-brand-gold font-black">VS</div>
+                        <div class="w-5/12"><p class="font-bold text-white">${next.equipe_exterieure}</p></div>
+                    </div>
                     
-                    // Calcul de la victoire/défaite
-                    let resultatText = "Nul";
-                    let colorClass = "text-gray-400";
-                    if (isDomicile && dernier.score_domicile > dernier.score_exterieur) { resultatText = "Victoire"; colorClass = "text-brand-green"; }
-                    if (!isDomicile && dernier.score_exterieur > dernier.score_domicile) { resultatText = "Victoire"; colorClass = "text-brand-green"; }
-                    if (isDomicile && dernier.score_domicile < dernier.score_exterieur) { resultatText = "Défaite"; colorClass = "text-brand-red"; }
-                    if (!isDomicile && dernier.score_exterieur < dernier.score_domicile) { resultatText = "Défaite"; colorClass = "text-brand-red"; }
-
-                    contDernier.innerHTML = `
-                        <div class="text-center mb-3">
-                            <span class="text-xs text-gray-500 uppercase tracking-wider">${dernier.journee_nom}</span>
-                        </div>
-                        <div class="flex justify-between items-center bg-black/20 p-3 rounded-lg border border-gray-800">
-                            <div class="text-right w-4/12 font-bold ${isDomicile ? 'text-white' : 'text-gray-400'} text-sm truncate" title="${dernier.equipe_domicile}">${dernier.equipe_domicile.substring(0, 12)}</div>
-                            <div class="text-center w-4/12 px-2 flex justify-center space-x-2">
-                                <span class="bg-brand-dark px-2 py-1 rounded text-lg font-bold text-white border border-gray-700">${dernier.score_domicile}</span>
-                                <span class="bg-brand-dark px-2 py-1 rounded text-lg font-bold text-white border border-gray-700">${dernier.score_exterieur}</span>
+                    <div class="space-y-4 pt-4 border-t border-gray-800">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-shirt text-brand-gold mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase">Couleur adverse</p>
+                                <p class="text-sm text-white">${advInfo.couleur_maillot || 'Non définie'}</p>
                             </div>
-                            <div class="text-left w-4/12 font-bold ${!isDomicile ? 'text-white' : 'text-gray-400'} text-sm truncate" title="${dernier.equipe_exterieure}">${dernier.equipe_exterieure.substring(0, 12)}</div>
                         </div>
-                        <div class="text-center mt-3 font-bold ${colorClass} uppercase tracking-widest text-xs">
-                            ${resultatText}
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-red mt-1"></i>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase">Terrain</p>
+                                <p class="text-sm text-white mb-2">${advInfo.terrain_nom || 'Non défini'}</p>
+                                <button onclick="copyToClipboard('${advInfo.terrain_adresse}')" class="text-[10px] bg-gray-800 px-2 py-1 rounded hover:bg-brand-green">
+                                    <i class="fa-solid fa-copy mr-1"></i> COPIER L'ADRESSE
+                                </button>
+                                <a href="https://www.google.com/maps/search/?api=1&query=${encodeAsUri(advInfo.terrain_adresse)}" target="_blank" class="text-[10px] bg-brand-green/20 text-brand-green px-2 py-1 rounded ml-2">
+                                    <i class="fa-solid fa-map"></i> MAPS
+                                </a>
+                            </div>
                         </div>
-                    `;
-                } else {
-                    contDernier.innerHTML = `<p class="text-gray-400 text-center">Aucun match joué</p>`;
-                }
-            });
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDay(dayNum) {
+            currentDay = dayNum;
+            document.getElementById('current-day-label').innerText = `Journée ${dayNum}`;
+            const matches = globalData.calendar[`Journee_${dayNum}`];
+            const container = document.getElementById('day-results');
+            
+            container.innerHTML = matches.map(m => `
+                <div class="bg-brand-card p-3 rounded-lg flex justify-between items-center text-xs border border-gray-900">
+                    <div class="w-5/12 text-right pr-2 ${m.equipe_domicile.includes(MY_CLUB) ? 'text-brand-gold font-bold' : ''}">${m.equipe_domicile}</div>
+                    <div class="w-2/12 flex justify-center gap-1">
+                        <span class="bg-black px-1.5 py-0.5 rounded text-white">${m.score_domicile ?? '?'}</span>
+                        <span class="bg-black px-1.5 py-0.5 rounded text-white">${m.score_exterieur ?? '?'}</span>
+                    </div>
+                    <div class="w-5/12 text-left pl-2 ${m.equipe_exterieure.includes(MY_CLUB) ? 'text-brand-gold font-bold' : ''}">${m.equipe_exterieure}</div>
+                </div>
+            `).join('');
+        }
+
+        function changeDay(dir) {
+            let newDay = currentDay + dir;
+            if(newDay >= 1 && newDay <= 26) renderDay(newDay);
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert("Adresse copiée !");
+        }
+
+        function encodeAsUri(text) {
+            return encodeURIComponent(text);
+        }
+
+        init();
     </script>
 </body>
 </html>
