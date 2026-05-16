@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC Portugal | Team App</title>
+    <title>FC Portugal | Game Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
@@ -11,110 +11,109 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { red: '#8A1538', green: '#006600', gold: '#D4AF37', dark: '#0f0f0f', card: '#171717' }
+                        brand: { red: '#8A1538', green: '#006600', gold: '#D4AF37', dark: '#0a0a0a', card: '#141414' }
                     }
                 }
             }
         }
     </script>
     <style>
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .tab-active { border-bottom: 3px solid #D4AF37; color: white; }
+        .jersey-shadow { filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.5)); }
+        .gradient-overlay { background: linear-gradient(180deg, rgba(138,21,56,0.15) 0%, rgba(10,10,10,1) 100%); }
     </style>
 </head>
-<body class="bg-brand-dark text-gray-200 font-sans">
+<body class="bg-brand-dark text-gray-100 font-sans pb-24">
 
-    <nav class="fixed bottom-0 left-0 right-0 bg-brand-card border-t border-gray-800 z-50 px-6 py-3 flex justify-between items-center lg:top-0 lg:bottom-auto">
-        <button onclick="showSection('next')" class="flex flex-col items-center text-xs gap-1 hover:text-brand-gold">
-            <i class="fa-solid fa-calendar-day text-lg"></i>Match
+    <nav class="fixed bottom-0 left-0 right-0 bg-brand-card/90 backdrop-blur-md border-t border-white/10 z-50 px-8 py-4 flex justify-between items-center lg:top-0 lg:bottom-auto lg:border-t-0 lg:border-b">
+        <button onclick="showSection('next')" class="flex flex-col items-center gap-1 hover:text-brand-gold transition">
+            <i class="fa-solid fa-star text-xl"></i><span class="text-[10px] uppercase font-bold">Focus</span>
         </button>
-        <button onclick="showSection('classement')" class="flex flex-col items-center text-xs gap-1 hover:text-brand-gold">
-            <i class="fa-solid fa-list-ol text-lg"></i>Classement
+        <button onclick="showSection('classement')" class="flex flex-col items-center gap-1 hover:text-brand-gold transition">
+            <i class="fa-solid fa-ranking-star text-xl"></i><span class="text-[10px] uppercase font-bold">Stats</span>
         </button>
-        <button onclick="showSection('calendrier')" class="flex flex-col items-center text-xs gap-1 hover:text-brand-gold">
-            <i class="fa-solid fa-table-list text-lg"></i>Résultats
+        <button onclick="showSection('calendrier')" class="flex flex-col items-center gap-1 hover:text-brand-gold transition">
+            <i class="fa-solid fa-calendar-days text-xl"></i><span class="text-[10px] uppercase font-bold">Agenda</span>
         </button>
     </nav>
 
-    <header class="p-6 pt-10 text-center lg:mt-16">
-        <h1 class="text-3xl font-black text-white italic">FC PORTUGAL</h1>
-        <p class="text-brand-gold text-xs tracking-[0.3em] uppercase">Division 1 • 2025/2026</p>
-    </header>
-
-    <main class="max-w-md mx-auto p-4 pb-24 lg:max-w-4xl">
+    <main class="max-w-4xl mx-auto min-h-screen">
         
-        <section id="section-next" class="space-y-4">
-            <div id="next-match-card"></div>
+        <section id="section-next" class="pt-6 px-4">
+            <div id="match-hero">
+                <div class="animate-pulse bg-brand-card h-64 rounded-3xl"></div>
+            </div>
         </section>
 
-        <section id="section-classement" class="hidden">
-            <div class="bg-brand-card rounded-xl overflow-hidden">
+        <section id="section-classement" class="hidden px-4 mt-8">
+            <div class="bg-brand-card rounded-2xl border border-white/5 shadow-2xl overflow-hidden">
+                <div class="p-5 border-b border-white/5 flex justify-between items-center">
+                    <h3 class="font-black italic text-xl">CLASSEMENT D1</h3>
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded">LIVE</span>
+                </div>
                 <table class="w-full text-sm">
-                    <thead class="bg-black/40 text-gray-500 uppercase text-[10px]">
-                        <tr>
-                            <th class="p-3 text-center">#</th>
-                            <th class="p-3 text-left">Équipe</th>
-                            <th class="p-3 text-center">J</th>
-                            <th class="p-3 text-center text-white">Pts</th>
+                    <thead>
+                        <tr class="text-gray-500 text-[10px] uppercase border-b border-white/5">
+                            <th class="p-4 text-center">#</th>
+                            <th class="p-4 text-left">Équipe</th>
+                            <th class="p-4 text-center">J</th>
+                            <th class="p-4 text-center text-white">Pts</th>
                         </tr>
                     </thead>
-                    <tbody id="ranking-body" class="divide-y divide-gray-800"></tbody>
+                    <tbody id="ranking-body" class="divide-y divide-white/5 text-gray-400"></tbody>
                 </table>
             </div>
         </section>
 
-        <section id="section-calendrier" class="hidden">
-            <div class="flex items-center justify-between mb-4 bg-brand-card p-2 rounded-lg">
-                <button onclick="changeDay(-1)" class="p-2"><i class="fa-solid fa-chevron-left"></i></button>
-                <span id="current-day-label" class="font-bold text-brand-gold">Journée 1</span>
-                <button onclick="changeDay(1)" class="p-2"><i class="fa-solid fa-chevron-right"></i></button>
+        <section id="section-calendrier" class="hidden px-4 mt-8">
+            <div class="flex items-center justify-between mb-6 bg-brand-card p-3 rounded-2xl border border-white/5">
+                <button onclick="changeDay(-1)" class="w-10 h-10 rounded-full hover:bg-white/10"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="text-center">
+                    <p class="text-[10px] uppercase text-gray-500 font-bold">Championnat</p>
+                    <span id="current-day-label" class="font-black text-xl text-brand-gold italic">JOURNÉE 1</span>
+                </div>
+                <button onclick="changeDay(1)" class="w-10 h-10 rounded-full hover:bg-white/10"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
-            <div id="day-results" class="space-y-2"></div>
+            <div id="day-results" class="space-y-3"></div>
         </section>
 
     </main>
 
     <script>
+        const MY_CLUB = "PORTUGAL FC";
         let currentDay = 1;
         let globalData = { ranking: [], calendar: {} };
-        const MY_CLUB = "PORTUGAL FC";
+
+        // Moteur de couleurs de maillots
+        const colorMap = {
+            "rouge": "#E30613", "bleu": "#0053A0", "jaune": "#FFD100", "vert": "#008C45",
+            "blanc": "#FFFFFF", "noir": "#1A1A1A", "bordeaux": "#6D071A", "rose": "#F49AC2",
+            "orange": "#F36F21", "gris": "#808080", "bleu foncé": "#002366"
+        };
 
         async function init() {
-            // Chargement parallèle des deux sources de données
-            const [resRanking, resCal] = await Promise.all([
-                fetch('../data/abssa_data.json').then(r => r.json()),
-                fetch('../data/calendrier.json').then(r => r.json())
-            ]);
-            
-            globalData.ranking = resRanking.classement;
-            globalData.calendar = resCal.journees;
-
-            renderRanking();
-            renderNextMatch();
-            renderDay(1);
+            try {
+                const [resRanking, resCal] = await Promise.all([
+                    fetch('../data/abssa_data.json').then(r => r.json()),
+                    fetch('../data/calendrier.json').then(r => r.json())
+                ]);
+                globalData.ranking = resRanking.classement;
+                globalData.calendar = resCal.journees;
+                renderRanking();
+                renderNextMatch();
+                renderDay(1);
+            } catch (e) { console.error("Erreur data:", e); }
         }
 
-        function showSection(id) {
-            ['next', 'classement', 'calendrier'].forEach(s => {
-                document.getElementById(`section-${s}`).classList.add('hidden');
-            });
-            document.getElementById(`section-${id}`).classList.remove('hidden');
-        }
-
-        function renderRanking() {
-            const container = document.getElementById('ranking-body');
-            container.innerHTML = globalData.ranking.map(team => `
-                <tr class="${team.equipe.includes(MY_CLUB) ? 'bg-brand-red/20 border-l-4 border-brand-green' : ''}">
-                    <td class="p-3 text-center text-gray-500">${team.position}</td>
-                    <td class="p-3 font-medium">${team.equipe}</td>
-                    <td class="p-3 text-center">${team.joues}</td>
-                    <td class="p-3 text-center font-bold text-brand-gold text-lg">${team.points}</td>
-                </tr>
-            `).join('');
+        function getJerseyColor(colorText) {
+            if(!colorText) return "#444";
+            const lower = colorText.toLowerCase();
+            for (const [key, value] of Object.entries(colorMap)) {
+                if (lower.includes(key)) return value;
+            }
+            return "#444";
         }
 
         function renderNextMatch() {
-            // On cherche le premier match "A Venir"
             let next = null;
             for(let i=1; i<=26; i++) {
                 next = globalData.calendar[`Journee_${i}`].find(m => 
@@ -123,67 +122,99 @@
                 if(next) break;
             }
 
-            const container = document.getElementById('next-match-card');
+            const hero = document.getElementById('match-hero');
             if(!next) {
-                container.innerHTML = "<p class='text-center py-10'>Aucun match prévu</p>";
+                hero.innerHTML = "<div class='text-center py-20 opacity-50 font-black italic'>SAISON TERMINÉE</div>";
                 return;
             }
 
-            // On récupère les infos de l'adversaire dans le JSON ranking pour avoir le terrain/maillot
-            const isDom = next.equipe_domicile.includes(MY_CLUB);
-            const advName = isDom ? next.equipe_exterieure : next.equipe_domicile;
-            // On nettoie le nom de l'adversaire pour chercher dans la base (enlever le chiffre)
-            const advClean = advName.replace(/\s+\d+$/, "").trim();
-            const advInfo = globalData.ranking.find(t => t.equipe.includes(advClean)) || {};
+            // Data des deux équipes
+            const dataDom = globalData.ranking.find(t => t.equipe === next.equipe_domicile) || {};
+            const dataExt = globalData.ranking.find(t => t.equipe === next.equipe_exterieure) || {};
 
-            container.innerHTML = `
-                <div class="bg-brand-card rounded-2xl p-6 shadow-2xl border border-gray-800">
-                    <div class="flex justify-between items-center mb-6 text-center">
-                        <div class="w-5/12"><p class="font-bold text-white">${next.equipe_domicile}</p></div>
-                        <div class="text-brand-gold font-black">VS</div>
-                        <div class="w-5/12"><p class="font-bold text-white">${next.equipe_exterieure}</p></div>
-                    </div>
+            hero.innerHTML = `
+                <div class="relative overflow-hidden rounded-[2rem] bg-brand-card border border-white/10 shadow-2xl">
+                    <div class="absolute inset-0 gradient-overlay"></div>
                     
-                    <div class="space-y-4 pt-4 border-t border-gray-800">
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-shirt text-brand-gold mt-1"></i>
-                            <div>
-                                <p class="text-xs text-gray-500 uppercase">Couleur adverse</p>
-                                <p class="text-sm text-white">${advInfo.couleur_maillot || 'Non définie'}</p>
+                    <div class="relative p-6 flex justify-between items-center">
+                        <span class="bg-brand-red text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">Prochain Match</span>
+                        <span class="text-brand-gold text-[10px] font-bold uppercase tracking-widest">${next.journee_nom}</span>
+                    </div>
+
+                    <div class="relative px-4 py-4 flex items-center justify-between">
+                        <div class="w-5/12 text-center group">
+                            <div class="mb-4 flex justify-center">
+                                <i class="fa-solid fa-shirt text-5xl jersey-shadow transition group-hover:scale-110" style="color: ${getJerseyColor(dataDom.couleur_maillot)}"></i>
+                            </div>
+                            <h4 class="font-black italic uppercase leading-none text-lg md:text-2xl">${next.equipe_domicile}</h4>
+                            <p class="text-[9px] text-gray-500 uppercase mt-2">Maillot: ${dataDom.couleur_maillot || '?'}</p>
+                        </div>
+
+                        <div class="w-2/12 text-center">
+                            <div class="text-3xl font-black italic text-brand-gold opacity-50">VS</div>
+                        </div>
+
+                        <div class="w-5/12 text-center group">
+                            <div class="mb-4 flex justify-center">
+                                <i class="fa-solid fa-shirt text-5xl jersey-shadow transition group-hover:scale-110" style="color: ${getJerseyColor(dataExt.couleur_maillot)}"></i>
+                            </div>
+                            <h4 class="font-black italic uppercase leading-none text-lg md:text-2xl">${next.equipe_exterieure}</h4>
+                            <p class="text-[9px] text-gray-500 uppercase mt-2">Maillot: ${dataExt.couleur_maillot || '?'}</p>
+                        </div>
+                    </div>
+
+                    <div class="relative mt-4 p-6 bg-white/5 backdrop-blur-sm border-t border-white/5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-brand-green/20 rounded-xl flex items-center justify-center text-brand-green">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-[10px] text-gray-500 uppercase font-bold">Stade de l'équipe domicile</p>
+                                <p class="text-xs text-white truncate font-medium">${dataDom.terrain_adresse || 'Adresse à confirmer'}</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-location-dot text-brand-red mt-1"></i>
-                            <div>
-                                <p class="text-xs text-gray-500 uppercase">Terrain</p>
-                                <p class="text-sm text-white mb-2">${advInfo.terrain_nom || 'Non défini'}</p>
-                                <button onclick="copyToClipboard('${advInfo.terrain_adresse}')" class="text-[10px] bg-gray-800 px-2 py-1 rounded hover:bg-brand-green">
-                                    <i class="fa-solid fa-copy mr-1"></i> COPIER L'ADRESSE
-                                </button>
-                                <a href="https://www.google.com/maps/search/?api=1&query=${encodeAsUri(advInfo.terrain_adresse)}" target="_blank" class="text-[10px] bg-brand-green/20 text-brand-green px-2 py-1 rounded ml-2">
-                                    <i class="fa-solid fa-map"></i> MAPS
-                                </a>
-                            </div>
+                        
+                        <div class="grid grid-cols-2 gap-3 mt-6">
+                            <button onclick="navigator.clipboard.writeText('${dataDom.terrain_adresse}'); alert('Adresse copiée !')" 
+                                    class="bg-white/5 hover:bg-white/10 border border-white/10 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-copy"></i> Copier
+                            </button>
+                            <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dataDom.terrain_adresse)}" target="_blank"
+                               class="bg-brand-green hover:bg-brand-green/80 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-center transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-map-location-dot"></i> GPS Maps
+                            </a>
                         </div>
                     </div>
                 </div>
             `;
         }
 
+        function renderRanking() {
+            const container = document.getElementById('ranking-body');
+            container.innerHTML = globalData.ranking.map(team => `
+                <tr class="${team.equipe.includes(MY_CLUB) ? 'bg-brand-red/10 text-white border-l-2 border-brand-green' : ''}">
+                    <td class="p-4 text-center font-bold text-xs">${team.position}</td>
+                    <td class="p-4 font-bold text-sm">${team.equipe}</td>
+                    <td class="p-4 text-center text-xs opacity-50">${team.joues}</td>
+                    <td class="p-4 text-center font-black text-brand-gold text-base">${team.points}</td>
+                </tr>
+            `).join('');
+        }
+
         function renderDay(dayNum) {
             currentDay = dayNum;
-            document.getElementById('current-day-label').innerText = `Journée ${dayNum}`;
+            document.getElementById('current-day-label').innerText = `JOURNÉE ${dayNum}`;
             const matches = globalData.calendar[`Journee_${dayNum}`];
             const container = document.getElementById('day-results');
             
             container.innerHTML = matches.map(m => `
-                <div class="bg-brand-card p-3 rounded-lg flex justify-between items-center text-xs border border-gray-900">
-                    <div class="w-5/12 text-right pr-2 ${m.equipe_domicile.includes(MY_CLUB) ? 'text-brand-gold font-bold' : ''}">${m.equipe_domicile}</div>
-                    <div class="w-2/12 flex justify-center gap-1">
-                        <span class="bg-black px-1.5 py-0.5 rounded text-white">${m.score_domicile ?? '?'}</span>
-                        <span class="bg-black px-1.5 py-0.5 rounded text-white">${m.score_exterieur ?? '?'}</span>
+                <div class="bg-brand-card p-4 rounded-2xl flex justify-between items-center border border-white/5 shadow-lg">
+                    <div class="w-5/12 text-right pr-2 text-[11px] font-bold uppercase ${m.equipe_domicile.includes(MY_CLUB) ? 'text-brand-gold' : 'text-gray-400'}">${m.equipe_domicile}</div>
+                    <div class="w-2/12 flex justify-center items-center bg-black/40 py-1 px-2 rounded-lg gap-2 border border-white/5">
+                        <span class="font-black text-white text-sm">${m.score_domicile ?? '-'}</span>
+                        <span class="font-black text-white text-sm">${m.score_exterieur ?? '-'}</span>
                     </div>
-                    <div class="w-5/12 text-left pl-2 ${m.equipe_exterieure.includes(MY_CLUB) ? 'text-brand-gold font-bold' : ''}">${m.equipe_exterieure}</div>
+                    <div class="w-5/12 text-left pl-2 text-[11px] font-bold uppercase ${m.equipe_exterieure.includes(MY_CLUB) ? 'text-brand-gold' : 'text-gray-400'}">${m.equipe_exterieure}</div>
                 </div>
             `).join('');
         }
@@ -193,13 +224,10 @@
             if(newDay >= 1 && newDay <= 26) renderDay(newDay);
         }
 
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text);
-            alert("Adresse copiée !");
-        }
-
-        function encodeAsUri(text) {
-            return encodeURIComponent(text);
+        function showSection(id) {
+            ['next', 'classement', 'calendrier'].forEach(s => document.getElementById(`section-${s}`).classList.add('hidden'));
+            document.getElementById(`section-${id}`).classList.remove('hidden');
+            window.scrollTo(0,0);
         }
 
         init();
